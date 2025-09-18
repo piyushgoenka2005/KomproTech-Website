@@ -1,43 +1,36 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Card } from "@/components/ui/card"
-import { Star } from "lucide-react"
+import { useState, useEffect } from "react";
+import { Card } from "@/components/ui/card";
+import { Star } from "lucide-react";
 
 export default function Testimonials() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
     {
-      name: "Emily Carter",
-      role: "CEO, TechStart Inc.",
+      name: "Debanjan Sandhaki",
+      role: "CEO, PhantomX",
       content:
         "KomproTech transformed our digital presence completely. Their innovative approach and attention to detail exceeded our expectations.",
       rating: 5,
     },
     {
-      name: "David Kim",
+      name: "Supriyo",
       role: "Marketing Director, GrowthCo",
       content:
         "The SEO optimization services boosted our organic traffic by 300%. Outstanding results and professional service throughout.",
       rating: 5,
     },
-    {
-      name: "Lisa Rodriguez",
-      role: "Founder, CreativeHub",
-      content:
-        "From concept to launch, KomproTech delivered a stunning mobile app that our users absolutely love. Highly recommended!",
-      rating: 5,
-    },
-  ]
+  ];
 
   useEffect(() => {
     const testimonialInterval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 3000) // 3 second delay
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 3000); // 3 second delay
 
-    return () => clearInterval(testimonialInterval)
-  }, [testimonials.length])
+    return () => clearInterval(testimonialInterval);
+  }, [testimonials.length]);
 
   return (
     <section id="testimonials" className="py-20 bg-card">
@@ -55,16 +48,25 @@ export default function Testimonials() {
           <Card className="p-8 cursor-glow glow-hover bg-background border-border relative overflow-hidden">
             <div className="relative z-10">
               <div className="flex justify-center mb-6">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
-                ))}
+                {[...Array(testimonials[currentTestimonial].rating)].map(
+                  (_, i) => (
+                    <Star
+                      key={i}
+                      className="h-6 w-6 text-yellow-400 fill-current"
+                    />
+                  )
+                )}
               </div>
               <blockquote className="text-xl md:text-2xl text-center mb-8 text-pretty leading-relaxed">
                 "{testimonials[currentTestimonial].content}"
               </blockquote>
               <div className="text-center">
-                <p className="font-semibold text-lg">{testimonials[currentTestimonial].name}</p>
-                <p className="text-accent">{testimonials[currentTestimonial].role}</p>
+                <p className="font-semibold text-lg">
+                  {testimonials[currentTestimonial].name}
+                </p>
+                <p className="text-accent">
+                  {testimonials[currentTestimonial].role}
+                </p>
               </div>
             </div>
 
@@ -75,7 +77,9 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentTestimonial ? "holographic-gradient" : "bg-muted-foreground/30"
+                    index === currentTestimonial
+                      ? "holographic-gradient"
+                      : "bg-muted-foreground/30"
                   }`}
                 />
               ))}
@@ -84,5 +88,5 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

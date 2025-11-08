@@ -22,79 +22,86 @@ export default function WebDevelopmentPage() {
   ]
 
   const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-featured e-commerce platform with advanced product management, payment integration, and admin dashboard.",
-      image: "/placeholder.jpg",
-      category: "ecommerce",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      features: ["Product Management", "Payment Gateway", "Admin Dashboard", "Responsive Design"],
-      liveUrl: "#",
-      githubUrl: "#",
-      status: "completed"
-    },
-    {
-      id: 2,
-      title: "Corporate Website",
-      description: "Modern corporate website with CMS integration, blog system, and contact management.",
-      image: "/placeholder.jpg",
-      category: "corporate",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS"],
-      features: ["CMS Integration", "Blog System", "SEO Optimized", "Contact Forms"],
-      liveUrl: "#",
-      githubUrl: "#",
-      status: "completed"
-    },
-    {
-      id: 3,
-      title: "Portfolio Website",
-      description: "Creative portfolio website with smooth animations and interactive elements.",
-      image: "/placeholder.jpg",
-      category: "portfolio",
-      technologies: ["React", "Framer Motion", "Styled Components", "GSAP"],
-      features: ["Smooth Animations", "Interactive Elements", "Responsive Design", "Performance Optimized"],
-      liveUrl: "#",
-      githubUrl: "#",
-      status: "completed"
-    },
-    {
-      id: 4,
-      title: "SaaS Dashboard",
-      description: "Comprehensive SaaS dashboard with analytics, user management, and real-time data visualization.",
-      image: "/placeholder.jpg",
-      category: "saas",
-      technologies: ["Vue.js", "D3.js", "Express.js", "PostgreSQL"],
-      features: ["Analytics Dashboard", "User Management", "Real-time Data", "API Integration"],
-      liveUrl: "#",
-      githubUrl: "#",
-      status: "completed"
-    },
-    {
-      id: 5,
-      title: "Restaurant Website",
-      description: "Beautiful restaurant website with online ordering system and reservation management.",
-      image: "/placeholder.jpg",
-      category: "ecommerce",
-      technologies: ["React", "Redux", "Firebase", "Material-UI"],
-      features: ["Online Ordering", "Reservation System", "Menu Management", "Mobile App"],
-      liveUrl: "#",
-      githubUrl: "#",
-      status: "completed"
-    },
-    {
-      id: 6,
-      title: "Tech Startup Landing",
-      description: "High-converting landing page for a tech startup with lead generation and analytics.",
-      image: "/placeholder.jpg",
-      category: "corporate",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
-      features: ["Lead Generation", "A/B Testing", "Analytics Integration", "Fast Loading"],
-      liveUrl: "#",
-      githubUrl: "#",
-      status: "completed"
-    }
-  ]
+  {
+    id: 1,
+    title: "Moonwatch Real Estate",
+    description:
+      "A sleek, conversion-focused landing page for a real estate company showcasing premium properties, investment highlights, and easy contact options.",
+    image: "/moonwatch.png",
+    category: "real estate",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Node.js"],
+    features: ["Property Showcase", "Lead Capture Forms", "Mobile Responsive Design"],
+    liveUrl: "https://moonwatch.in/",
+    githubUrl: "#",
+    status: "completed"
+  },
+  {
+    id: 2,
+    title: "Social Webbers",
+    description:
+      "A modern digital agency website designed to highlight services in web development, branding, and marketing, complete with a dynamic CMS and case studies.",
+    image: "/social-webbers.png",
+    category: "agency",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS"],
+    features: ["CMS Integration", "Portfolio Showcase", "SEO Optimized", "Contact Management"],
+    liveUrl: "https://socialwebbers.in/",
+    githubUrl: "#",
+    status: "completed"
+  },
+  {
+    id: 3,
+    title: "PowerGym",
+    description:
+      "A clean, single-page gym website built for speed and clarity. It highlights classes, trainers, and membership options—no backend required.",
+    image: "/gym.png",
+    category: "fitness",
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    features: ["Class Schedule", "Trainer Profiles", "Membership Plans", "Fully Responsive Layout"],
+    liveUrl: "https://power-gym-fitness.vercel.app/",
+    githubUrl: "#",
+    status: "completed"
+  },
+  {
+    id: 4,
+    title: "PRISM – Star Imaginary",
+    description:
+      "A visually rich website created for PRISM, blending artistic visuals and storytelling to present a fictional star brand experience.",
+    image: "/prism.png",
+    category: "creative",
+    technologies: ["React", "Framer Motion", "GSAP", "Styled Components"],
+    features: ["Immersive Animations", "Interactive Storytelling", "Custom Transitions", "Responsive Design"],
+    liveUrl: "https://prism-omega-one.vercel.app/",
+    githubUrl: "#",
+    status: "completed"
+  },
+  {
+    id: 5,
+    title: "Cocktail Landing Page",
+    description:
+      "A stylish landing page designed for a cocktail brand, featuring signature drinks, mixology tips, and event promotions.",
+    image: "/cocktail-website.png",
+    category: "landing",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    features: ["Drink Showcase", "Event Highlights", "Smooth Animations", "Optimized for Mobile"],
+    liveUrl: "https://cocktail-landing-page-bay.vercel.app/",
+    githubUrl: "#",
+    status: "completed"
+  },
+  {
+    id: 6,
+    title: "Shree Ganpati Traders",
+    description:
+      "A professional website for a printing and packaging business, highlighting their printing solutions, product range, and easy quote requests.",
+    image: "/ganpati-traders.png",
+    category: "ecommerce",
+    technologies: ["Next.js", "Tailwind CSS", "React", "EmailJS"],
+    features: ["Product Showcase", "Quote Request Form", "Service Highlights", "Responsive Design"],
+    liveUrl: "https://shree-ganpati-traders.vercel.app/",
+    githubUrl: "#",
+    status: "ongoing"
+  }
+];
+
 
   const filteredProjects = selectedCategory === "all" 
     ? projects 
@@ -142,7 +149,7 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-card">
+      {/* <section className="py-8 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -161,14 +168,14 @@ export default function WebDevelopmentPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Projects Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <Card key={project.id} className="group cursor-glow glow-hover bg-card border-border overflow-hidden">
+              <Card key={project.id} className="group cursor-glow glow-hover bg-card border-border overflow-hidden p-0">
                 <div className="relative">
                   <img
                     src={project.image}

@@ -10,7 +10,12 @@ export const metadata: Metadata = {
   title: "KomproTech - IT Solutions & Digital Innovation",
   description:
     "Leading IT solutions company specializing in website development, app creation, SEO, automation, and digital transformation.",
-  generator: "v0.app",
+  generator: "KomproTech",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 }
 
 export default function RootLayout({

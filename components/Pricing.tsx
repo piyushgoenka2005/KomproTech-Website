@@ -75,11 +75,11 @@ export default function Pricing() {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`p-8 cursor-glow glow-hover relative flex flex-col ${plan.popular ? "border-accent bg-background" : "bg-card border-border"}`}
+              className={`p-8 cursor-glow glow-hover relative flex flex-col ${plan.popular ? "border-accent bg-background pt-12" : "bg-card border-border"}`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="holographic-gradient text-white px-4 py-2 rounded-full text-sm font-medium">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="holographic-gradient text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                     Most Popular
                   </span>
                 </div>
@@ -105,6 +105,9 @@ export default function Pricing() {
               >
                 Get Started
               </Button>
+              <p className="text-xs text-muted-foreground text-center mt-3">
+                *Terms and conditions apply
+              </p>
             </Card>
           ))}
         </div>

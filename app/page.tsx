@@ -10,11 +10,13 @@ import Team from "@/components/Team"
 import Testimonials from "@/components/Testimonials"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
+import SplashCursor from '@/components/SplashCursor'
 
 export default function KomproTechHomepage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <BackgroundEffects />
+      <SplashCursor />
       <Navigation />
       <Hero />
       <About />

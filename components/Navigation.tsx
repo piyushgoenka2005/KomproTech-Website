@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function Navigation() {
   const scrollToSection = (sectionId: string) => {
@@ -16,8 +17,20 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold holographic-text">KomproTech</h1>
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={() => scrollToSection('home')}
+              className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity"
+            >
+              <Image 
+                src="/logo.png" 
+                alt="KomproTech Logo" 
+                width={40} 
+                height={40}
+                className="object-contain bg-transparent"
+              />
+              <h1 className="text-2xl font-bold holographic-text">KomproTech</h1>
+            </button>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
